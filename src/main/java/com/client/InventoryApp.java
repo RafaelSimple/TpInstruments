@@ -1,4 +1,4 @@
-package com.ui;
+package com.client;
 
 import com.model.*;
 import javafx.application.Application;

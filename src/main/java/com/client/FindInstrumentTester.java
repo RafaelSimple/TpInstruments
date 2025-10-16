@@ -1,6 +1,12 @@
-package com.model;
+package com.client;
 
 import java.util.List;
+
+import com.model.Builder;
+import com.model.Inventory;
+import com.model.Style;
+import com.model.Type;
+import com.model.Wood;
 
 public class FindInstrumentTester {
 
