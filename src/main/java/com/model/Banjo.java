@@ -1,10 +1,10 @@
 package com.model;
 
-public class Banjo {
-    private BanjoSpec spec;
+public class Banjo extends Instrument{
 
-    public BanjoSpec getSpec() {
-        return spec;
+    public Banjo(String serialNumber, double price, BanjoSpec spec){
+
+        super(serialNumber, price, spec);
     }
 
 }

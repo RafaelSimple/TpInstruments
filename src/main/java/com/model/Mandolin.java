@@ -1,12 +1,11 @@
 package com.model;
 
-public class Mandolin {
-    private MandolinSpec spec;
+public class Mandolin extends Instrument{
 
-    public MandolinSpec getSpec() {
-        return spec;
+    public Mandolin(String serialNumber, double price, MandolinSpec spec) {
+
+        super(serialNumber, price, spec);
     }
 
-    
 
 }

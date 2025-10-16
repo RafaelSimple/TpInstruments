@@ -20,4 +20,13 @@ public class Instrument {
         return spec;
     }
 
+    @Override
+    public String toString() {
+        return "Instrument{" +
+                "serialNumber='" + serialNumber + '\'' +
+                ", price=" + price +
+                ", spec=" + spec +
+                '}';
+    }
+
 }

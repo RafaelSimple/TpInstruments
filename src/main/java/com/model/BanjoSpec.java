@@ -1,45 +1,29 @@
 package com.model;
 
-public class BanjoSpec extends InstrumentSpec {
+public class BanjoSpec extends InstrumentSpec{
     private int nbrStrings;
-    private boolean invertedStrings;
-    private Builder builder;
-    private String model;
-    private Type type;
-    private Wood backWood, topWood;
 
-    public BanjoSpec(Builder builder, String model, Type type, Wood backWood, Wood topWood, int nbrStrings, boolean invertedStrings) {
+    public BanjoSpec(Builder builder, String model, Type type, Wood backWood, Wood topWood, int nbrStrings) {
         super(builder, model, type, backWood, topWood);
         this.nbrStrings = nbrStrings;
-        this.invertedStrings = invertedStrings;
     }
 
     public int getNbrStrings() {
         return nbrStrings;
     }
 
-    public boolean isInvertedStrings() {
-        return invertedStrings;
+    public boolean matches (InstrumentSpec otherSpec) {
+        if (!super.matches(otherSpec))
+            return false;
+        if (nbrStrings != ((BanjoSpec)otherSpec).nbrStrings)
+            return false;
+        return true;
     }
 
-    public Builder getBuilder() {
-        return builder;
+    @Override
+    public String toString() {
+        return "GuitarSpec{" +
+                "nbrStrings=" + nbrStrings +
+                "} " + super.toString();
     }
-
-    public String getModel() {
-        return model;
-    }
-
-    public Type getType() {
-        return type;
-    }
-
-    public Wood getBackWood() {
-        return backWood;
-    }
-
-    public Wood getTopWood() {
-        return topWood;
-    }
-
 }
